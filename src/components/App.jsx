@@ -50,7 +50,7 @@ export class App extends Component {
 
 findContact = () => {
     const filterContact = this.state.contacts.filter(({ name }) => {
-      return name.toLowerCase().includes(this.state.filter.toLowerCase());
+      return name.includes(this.state.filter);
     });
     console.log(filterContact);
     return filterContact;
